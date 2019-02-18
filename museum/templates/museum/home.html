@@ -535,8 +535,34 @@
 							<a href="blog-deatils-1.html"><img src="{% static 'img/blog/b1.jpg' %}" alt="" /></a>
 							<div class="bolg_date">
 								<a href="blog-deatils-1.html">
-									<span>{{ post.published_date }}</span>
-									<span class="month">sept</span>
+									<span>{{ post.published_date.day }}</span>
+									<span class="month">
+										{% if post.published_date.month == 1 %}
+											янв
+										{% elif post.published_date.month == 2 %}
+											фев
+										{% elif post.published_date.month == 3 %}
+											мар
+										{% elif post.published_date.month == 4 %}
+											апр
+										{% elif post.published_date.month == 5 %}
+											мая
+										{% elif post.published_date.month == 6 %}
+											июн
+										{% elif post.published_date.month == 7 %}
+											июл
+										{% elif post.published_date.month == 8 %}
+											авг
+										{% elif post.published_date.month == 9 %}
+											сен
+										{% elif post.published_date.month == 10 %}
+											окт
+										{% elif post.published_date.month == 11 %}
+											ноя
+										{% elif post.published_date.month == 12 %}
+											дек	 
+										{% endif %}
+										</span>
 								</a>
 							</div>
 							
@@ -544,7 +570,7 @@
 						<div class="blog_comment fix">
 							<ul>
 								<li><a href="#"><i class="fa fa-picture-o"></i></a></li>
-								<li><a href="#"><i class="fa fa-user"></i>Authur</a></li>
+								<li><a href="#"><i class="fa fa-user"></i>{{ post.author }}</a></li>
 								<li><a href="#"><i class="fa fa-comment-o"></i>12 Comments</a></li>
 							</ul>
 						</div>

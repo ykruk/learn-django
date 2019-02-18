@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Народный исторический  музей «Спадчына»</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">    
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'venobox/venobox.css' %}" type="text/css" media="screen" />     
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">    
+        <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}">     
+        <link rel="stylesheet" href="{% static 'css/owl.transitions.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/nivo-slider.css' %}">        
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">       
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">           
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">        
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">     
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+        
+        <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+    </head>
+    <body>
+    <!--Start nav  area --> 
+	<div class="nav_area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<!--logo area-->
+				<div class="col-md-3 col-sm-3 col-xs-4">
+					<div class="logo"><a href="/">Народный исторический  музей «Спадчына»</a></div>
+				</div>
+				<!--end logo area-->
+				<!--nav area-->
+				<div class="col-md-9 col-sm-9 col-xs-8">
+					<!--  nav menu-->
+					<nav class="menu">
+						<ul class="navid">
+							<li><a href="#home">Главная</a></li>
+							<li><a href="#about">Про музей</a></li>
+							<li><a href="#teams">Teams</a></li>
+							<li><a href="#projects">Экспозиции</a></li>						
+							<li><a href="#blogs">Новости</a></li>
+							<li><a href="#contact">Контакты</a></li>
+						</ul>
+					</nav>
+					<!--end  nav menu-->
+					<!--moblie menu area-->
+						<div class="dropdown mabile_menu">
+							<a data-toggle="dropdown" class="mobile-menu" href="#"><span> MENU </span><i class="fa fa-bars"></i></a>
+						  <ul class="dropdown-menu mobile_menus drop_mobile navid">
+								<li><a href="/">Главная</a></li>
+								<li><a href="#about">Про музей</a></li>
+								<li><a href="#teams">Teams</a></li>
+								<li><a href="#projects">Экспозиции</a></li>							
+								<li><a href="#blogs">Новости</a></li>
+								<li><a href="#contact">Контакты</a></li>
+						  </ul>
+						</div>	
+						<!--end moblie menu-->						
+				</div>
+				<!--end nav area-->
+			</div>	
+		</div>
+	</div>
+	<!--end header  area -->	
+	{% block content %}
+	{% endblock %}
+	</body>
+</html>
+ 

@@ -19,47 +19,47 @@ def exposition_detail(request, pk):
     exposition = get_object_or_404(Exposition, pk=pk)
     return render(request, 'museum/exposition_detail.html', {'exposition': exposition}) 
 
-def post_new(request):
-    if request.method == "POST":
-        form = PostForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('post_detail', pk=post.pk)
-    else:
-        form = PostForm()
-    return render(request, 'museum/post_edit.html', {'form': form})
+# def post_new(request):
+#     if request.method == "POST":
+#         form = PostForm(request.POST)
+#         if form.is_valid():
+#             post = form.save(commit=False)
+#             post.author = request.user
+#             post.published_date = timezone.now()
+#             post.save()
+#             return redirect('post_detail', pk=post.pk)
+#     else:
+#         form = PostForm()
+#     return render(request, 'museum/post_edit.html', {'form': form})
 
-def post_edit(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    if request.method == "POST":
-        form = PostForm(request.POST, request.FILES, instance=post)
-        if form.is_valid():
-            if 'photo' in request.FILES:
-                form.photo = request.FILES['photo']
-            form.save(commit=True)
-            return HttpResponse('image upload success')
+# def post_edit(request, pk):
+#     post = get_object_or_404(Post, pk=pk)
+#     if request.method == "POST":
+#         form = PostForm(request.POST, request.FILES, instance=post)
+#         if form.is_valid():
+#             if 'photo' in request.FILES:
+#                 form.photo = request.FILES['photo']
+#             form.save(commit=True)
+#             return HttpResponse('image upload success')
 
-            post = form.save(commit=False)
-            post.author = request.user
-            post.published_date = timezone.now()
-            post.save()
-            return redirect('post_detail', pk=post.pk)
-    else:
-        form = PostForm(instance=post)
-    return render(request, 'museum/post_edit.html', {'form': form}) 
+#             post = form.save(commit=False)
+#             post.author = request.user
+#             post.published_date = timezone.now()
+#             post.save()
+#             return redirect('post_detail', pk=post.pk)
+#     else:
+#         form = PostForm(instance=post)
+#     return render(request, 'museum/post_edit.html', {'form': form}) 
 
-def exposition_edit(request):
-    form = ExpositionForm()
-    if request.method == 'POST':
-        form =ExpositionForm(request.POST, request.FILES)
-        if form.is_valid():
-            if 'photo' in request.FILES:
-                form.photo = request.FILES['photo']
-            form.save(commit=True)
-            return HttpResponse('image upload success')
-        else:
-            print(form.errors)
-        return render(request, 'museum/exposition_edit.html', {'form': form})
+# def exposition_edit(request):
+#     form = ExpositionForm()
+#     if request.method == 'POST':
+#         form =ExpositionForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             if 'photo' in request.FILES:
+#                 form.photo = request.FILES['photo']
+#             form.save(commit=True)
+#             return HttpResponse('image upload success')
+#         else:
+#             print(form.errors)
+#         return render(request, 'museum/exposition_edit.html', {'form': form})

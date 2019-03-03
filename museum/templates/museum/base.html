@@ -37,13 +37,12 @@
 				</div>
 				<!--end logo area-->
 				<!--nav area-->
-				<div class="col-md-9 col-sm-9 col-xs-8">
+				<div class="col-md-7 col-sm-7 col-xs-6">
 					<!--  nav menu-->
 					<nav class="menu">
 						<ul class="navid">
-							<li><a href="#home">Главная</a></li>
+							<li><a href="/">Главная</a></li>
 							<li><a href="#about">Про музей</a></li>
-							<li><a href="#teams">Teams</a></li>
 							<li><a href="#projects">Экспозиции</a></li>						
 							<li><a href="#blogs">Новости</a></li>
 							<li><a href="#contact">Контакты</a></li>
@@ -52,11 +51,10 @@
 					<!--end  nav menu-->
 					<!--moblie menu area-->
 						<div class="dropdown mabile_menu">
-							<a data-toggle="dropdown" class="mobile-menu" href="#"><span> MENU </span><i class="fa fa-bars"></i></a>
+							<a data-toggle="dropdown" class="mobile-menu" href="#"><span> МЕНЮ </span><i class="fa fa-bars"></i></a>
 						  <ul class="dropdown-menu mobile_menus drop_mobile navid">
 								<li><a href="/">Главная</a></li>
 								<li><a href="#about">Про музей</a></li>
-								<li><a href="#teams">Teams</a></li>
 								<li><a href="#projects">Экспозиции</a></li>							
 								<li><a href="#blogs">Новости</a></li>
 								<li><a href="#contact">Контакты</a></li>
@@ -65,12 +63,69 @@
 						<!--end moblie menu-->						
 				</div>
 				<!--end nav area-->
+				<!--register area-->
+				<div class="col-md-2 col-sm-2 col-xs-2">
+						<div class="reg"><p>Войти</p></div>
+				</div>
+				<!--end register area-->
 			</div>	
 		</div>
 	</div>
 	<!--end header  area -->	
 	{% block content %}
 	{% endblock %}
+
+	<div class="footer_bottom_area" id="contact">
+			<div class="container">
+				<div class="row">
+					<div class=" col-sm-12 col-md-12 col-lg-12">
+						<div class="footer_text">
+							<p>© 2019 ГУО «Учебно-педагогический комплекс «Залужский детский сад - средняя школа»</p>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	
+			<script src="{% static 'js/vendor/jquery-1.11.3.min.js' %}"></script>   
+			<script src="{% static 'js/bootstrap.min.js' %}"></script>   
+			<script src="{% static 'js/owl.carousel.min.js' %}"></script>       
+			<script src="{% static 'js/plugins.js' %}"></script>	
+			<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+			<script src="{% static 'js/waypoints.min.js' %}"></script>
+			<script src="{% static 'js/jquery.mixitup.js' %}"></script>
+			<script src="{% static 'js/jquery.nivo.slider.pack.js' %}"></script>       
+			<script src="{% static 'js/jquery.nav.js' %}"></script>   
+			<script src="{% static 'js/wow.js' %}"></script>
+			<script type="text/javascript">new WOW().init();</script>
+			<script type="text/javascript" src="{% static 'venobox/venobox.min.js' %}"></script>         
+			<script src="{% static 'js/main.js' %}" type="text/javascript"></script>
+			<!-- Google Map js -->
+			<script src="https://maps.googleapis.com/maps/api/js"></script>
+			<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.3546117316773!2d26.600799315581074!3d53.44424697999961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDI2JzM5LjMiTiAyNsKwMzYnMTAuOCJF!5e0!3m2!1sru!2sby!4v1550508263887" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+	
+			<script>
+				function initialize() {
+				  var mapOptions = {
+					zoom: 15,
+					scrollwheel: false,
+					center: new google.maps.LatLng(53.444247, 26.602988)
+				  };
+	
+				  var map = new google.maps.Map(document.getElementById('googleMap'),
+					  mapOptions);
+	
+	
+				  var marker = new google.maps.Marker({
+					position: map.getCenter(),
+					icon: "{% static 'img/map-marker.png' %}",
+					map: map
+				  });
+	
+				}
+	
+				google.maps.event.addDomListener(window, 'load', initialize);
+			</script>
 	</body>
 </html>
  

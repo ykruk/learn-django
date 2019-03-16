@@ -4,10 +4,10 @@
 {% block content %}
 	
 	<!-- HOME SLIDER -->
-	<div class="slider-wrap home-1-slider" id="home">
+	<div class="slider-wrap home-1-slider collapse in visible-lg visible-md" id="home">
 		<div id="mainSlider" class="nivoSlider slider-image">
-			<img src="{% static 'img/slider.jpg' %}" alt="main slider" title="#htmlcaption1"/>
-			<img src="{% static 'img/slider.jpg' %}" alt="main slider" title="#htmlcaption2"/>
+			<img src="{% static 'img/sl1.jpg' %}" alt="main slider" title="#htmlcaption1"/>
+			<img src="{% static 'img/sl2.jpg' %}" alt="main slider" title="#htmlcaption2"/>
 		</div>
 		<div id="htmlcaption1" class="nivo-html-caption slider-caption-1">
 			<div class="slider-progress"></div>	
@@ -18,20 +18,14 @@
 							<div class="middle-text">
 								<div class="left_sidet1">
 									<div class="cap-title wow slideInRight" data-wow-duration=".9s" data-wow-delay="0s">
-										<h1>Parallax & Responsive Template</h1>
+										<h1>В музее проходят обзорные и тематические экскурсии, уроки, внеклассные мероприятия: литературно-исторические гостиные, викторины, митинги-реквиемы, уроки мужества.</h1>
 									</div>
 									<div class="cap-dec wow slideInRight" data-wow-duration="1.1s" data-wow-delay="0s">
-										<h2>Liendo provides absolutely responsive and flexible layout, which adapts to any<br /> screen resolution. Each block will resize and fit any screen perfectly.</h2>
+										<h2></h2>
 									</div>	
 									<div class="cap-readmore animated fadeInUpBig" data-wow-duration="1.5s" data-wow-delay=".5s">
-										<a href="#" >Buy now</a>
-										<a href="#" class="hover_slider_button">Shop Now</a>
+										<a href="#" class="hover_slider_button">Подробнее</a>
 									</div>
-								</div>
-								<div class="right_sidet1">
-									<div class="slide-image1">
-										<img class="wow slideInUp"  data-wow-duration="1.5s" data-wow-delay="0s" src="{% static 'img/home1/1.png' %}" alt="slider caption" />
-									</div>									
 								</div>				
 							</div>	
 						</div>		
@@ -48,21 +42,15 @@
 							<div class="middle-text">
 								<div class="left_sidet1">
 									<div class="cap-title wow bounceInDown" data-wow-duration=".9s" data-wow-delay="0s">
-										<h1>How to start your own business</h1>
+										<h1>Цель работы музея – изучение истории, культуры и природы своего края, постижение   таких понятий как Беларусь, Родина, Отчизна, осознание истории земли, где жили  деды и прадеды, которые оставили своим потомкам богатое духовное наследие.</h1>
 									</div>
 									<div class="cap-dec wow slideInRight" data-wow-duration="1.1s" data-wow-delay="0s">
-										<h2>Liendo provides absolutely responsive and flexible layout, which adapts to any<br /> screen resolution. Each block will resize and fit any screen perfectly.</h2>
+										<h2></h2>
 									</div>	
 									<div class="cap-readmore animated fadeInUpBig" data-wow-duration="1.5s" data-wow-delay=".5s">
-										<a href="#" >Buy now</a>
-										<a href="#" class="hover_slider_button">Shop Now</a>
+										<a href="#" class="hover_slider_button">Подробнее</a>
 									</div>
-								</div>
-								<div class="right_sidet1">
-									<div class="slide-image2">
-										<img class="wow slideInUp"  data-wow-duration="1.5s" data-wow-delay="0s" src="{% static 'img/home1/2.png' %}" alt="slider caption" />
-									</div>									
-								</div>										
+								</div>									
 							</div>										
 						</div>	
 					</div>
@@ -73,7 +61,7 @@
 	</div>
 	<!-- HOME SLIDER -->
 	<!-- about  area -->
-	<div class="about_area" id="about">
+	<div class="about_area collapse in visible-lg visible-md" id="about">
 		<div class="container">
 			<div class="row">
 				<!--section title-->
@@ -86,7 +74,31 @@
 			</div>		
 			<div class="row">
 				<!--single Item-->
-				<div class="col-sm-6 col-md-12 col-lg-12">
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					<div class="about_content">
+						<h2>Исторический музей “Спадчына” – визитная карточка учреждения образования, важная составляющая в системе работы по гражданско –патриотическому воспитанию учащихся. Музей расположен в четырёх залах.</h2>
+						<p>В экспозициях собрано множество документов и фотографий, свидетельствующих об истории создания колхоза, Залужской школы и фельдшерско-акушерского пункта в деревне Залужье. Много информации собрано о знаменитых земляках и выпускниках школы (поэт России В.Леонов, доктор искусствоведения Е.М.Сахуто и др.).</p>
+						<p>В музее проходят обзорные и тематические экскурсии, уроки, внеклассные мероприятия: литературно-исторические гостиные, викторины, митинги-реквиемы, уроки мужества. Важным направлением деятельности музея является исследовательско-поисковая работа.</p>
+					</div>
+				</div>
+				<!-- end single Item-->
+			</div>
+		</div>	
+	</div>
+	<div class="about_area_sm collapse in visible-sm visible-xs" id="about">
+		<div class="container">
+			<div class="row">
+				<!--section title-->
+				<div class="col-md-12 col-sm-12 col-lg-12">	
+					<div class="section_title">
+						<h2 class="title"><span>О нас</span></h2>
+					</div>
+				</div>
+				<!--end section title-->
+			</div>		
+			<div class="row">
+				<!--single Item-->
+				<div class="col-sm-12 col-md-12 col-lg-12">
 					<div class="about_content">
 						<h2>Исторический музей “Спадчына” – визитная карточка учреждения образования, важная составляющая в системе работы по гражданско –патриотическому воспитанию учащихся. Музей расположен в четырёх залах.</h2>
 						<p></p>
@@ -97,41 +109,8 @@
 		</div>	
 	</div>
 	<!-- end about  area -->
-	<!-- progress area -->
-	<!-- <div class="progress_area">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="progress_text">
-						<h2><span>Show off your skill?</span></h2>
-						<p>Praesent consequat mi vel magna cursus blandit. Cras semper ultrices libero vel interdum. In congue justo sit amet odio semper, non suscipit elit fringilla. Aenean vitae metus efficitur, mattis dolor ac, condimentum lacus...</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="progress_content">
-						<div class="progress  progress-bar-value">					
-							<div class="progress-bar wow fadeInLeft" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 60%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
-								<span class="p_text_left">Photoshop</span>
-								<span class="p_text_right">60%</span>
-							</div>
-						</div>
-						<div class="progress  progress-bar-value">					
-							<div class="progress-bar wow fadeInLeft" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 90%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
-								<span class="p_text_left">Applications</span>
-								<span class="p_text_right">90%</span>
-							</div>
-						</div>
-						<div class="progress  progress-bar-value">					
-							<div  class="progress-bar wow fadeInLeft" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 45%;" data-wow-duration="1.5s" data-wow-delay="1.2s">
-								<span class="p_text_left">Development</span>
-								<span class="p_text_right">45%</span>
-							</div>
-					</div>
-				</div>
-			</div>
-		</div>	
-	</div> -->
-	<!--end  progress area -->
+
+	<!--portfolio area -->
 	<div class="portfolio_area" id="projects">
 		<div class="container">
 			<div class="row">
@@ -144,18 +123,6 @@
 				<!--end section title-->
 			</div>			
 			<div class="row">
-				<!-- <div class="col-md-12">
-					<div class="portfolio_nav">
-						<ul>
-							<li class="active filter" data-filter="all">All works</li>
-							<li class="filter" data-filter=".Business">Business</li>
-							<li class="filter" data-filter=".Website">Website</li>
-							<li class="filter" data-filter=".Photography">Photography</li>
-							<li class="filter" data-filter=".Logo">Logo</li>
-							<li class="filter" data-filter=".Photoshop">Photoshop</li>
-						</ul>
-					</div>
-				</div>						 -->
 
 				<div class="project_maxitup">
 				<!--single portfolio item-->
@@ -165,7 +132,7 @@
 						<div class="single_protfolio">
 							
 							<div class="prot_imag">
-								<a class="venobox" href="{% url 'exposition_detail' pk=exposition.pk %}"><img src="{{ MEDIA_URL }}{{ exposition.photo }}" alt="" /></a>
+								<a href="{% url 'exposition_detail' pk=exposition.pk %}"><img src="{{ MEDIA_URL }}{{ exposition.photo }}" alt="" /></a>
 								<div class="hover_port_text">
 									<h2><a href="{% url 'exposition_detail' pk=exposition.pk %}">{{ exposition.title }}</a></h2>
 									<p>
@@ -187,39 +154,14 @@
 		</div>	
 	</div>
 	<!--end portfolio area -->
-	<!-- client  area -->
-	<!-- <div class="client_area">
-		<div class="container">
-			<div class="row">
-				<div class="client_own curosel-style client_style">
-					<div class="col-md-12">
-						<div class="client">
-							<div class="client_img">
-								<a href="#"><img src="{% static 'img/client/c1.jpg' %}" alt="" /></a>
-							</div>
-						</div>
-						<div class="client_content">
-							<div class="client_text">
-								<h2><span>client says</span></h2>
-								<p>Praesent consequat mi vel magna cursus blandit. Cras semper ultrices libero vel interdum. In congue justo sit amet odio semper, non suscipit elit fringilla. Aenean vitae metus efficitur, mattis dolor ac, condimentum lacus...</p>
-								<a href="">John doe <span>- Busines Man -</span></a>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-
-			</div>
-		</div>	
-	</div> -->
-	<!-- end client  area -->
+	
 	<!--blog area -->
 	
 	<div class="blog_area" id="blogs">
 		<div class="container">
 			<div class="row">
 				<!--section title-->
-				<div class="col-lg-4 col-md-12">	
+				<div class="col-lg-12 col-md-12">	
 					<div class="section_title">
 						<h2 class="title"><span>Новости</span></h2>
 					</div>
@@ -269,12 +211,6 @@
 							</div>
 							
 						</div>
-						<div class="blog_comment fix">
-							<ul>
-								<li><a href="#"><i class="fa fa-picture-o"></i></a></li>
-								<li><a href="#"><i class="fa fa-user"></i>{{ post.author }}</a></li>
-							</ul>
-						</div>
 						<div class="blog_text">
 							<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
 							<!-- <p>{{ post.text|linebreaksbr }}</p> -->
@@ -291,102 +227,6 @@
 	</div>
 	
 	<!--end blog area -->
-	<!--counter up area -->
-	<!-- <div class="counterup_area" id="work">
-		<div class="container">
-			<div class="row">
-				<div class=" col-sm-4 col-md-4 col-lg-4">
-					<div class="counter_up">
-						<div class="iconcounter"><i class="fa fa-coffee"></i></div>
-						<div class="counter">
-							<h1 class="number">18,450</h1>
-							<p class="text">Questions Answered</p>
-						</div>
-					</div>
-				</div>				
-				<div class=" col-sm-4 col-md-4 col-lg-4">
-					<div class="counter_up">
-						<div class="iconcounter cb2"><i class="fa fa-download"></i></div>
-						<div class="counter ">
-							<h1 class="number cn2">12,380</h1>
-							<p class="text">Time Downloaded</p>
-						</div>
-					</div>
-				</div>
-				<div class=" col-sm-4 col-md-4 col-lg-4">
-					<div class="counter_up">
-						<div class="iconcounter cb3"><i class="fa fa-heart"></i></div>
-						<div class="counter">
-							<h1 class="number cn3">34,292</h1>
-							<p class="text">Heart Given</p>
-						</div>
-					</div>
-			</div>		
-		</div>	
-	</div> -->
-	<!--end counterup area -->
-	<div class="footer_area ">
-		<div class="container">
-			<div class="row">
-				<!--section title-->
-				<div class=" col-sm-12 col-md-12 col-lg-12">	
-					<div class="section_title service_color">
-						<h2 class="title"><span>Контакты</span></h2>
-					</div>
-				</div>
-				<!--end section title-->
-			</div>		
-			<div class="row">
-				<div class="col-sm-4 col-md-4 col-lg-4">
-					<div class="single_address fix">
-						<div class="address_icon"><span><i class="fa fa-map-marker"></i></span></div>
-						<div class="address_text"><p><span>Адрес музея:</span> 222669, Минская обл., Столбцовский р-н., д. Залужье, ул. Новая, 155</p></div>
-					</div>
-					<div class="single_address fix">
-						<div class="address_icon"><span><i class="fa fa-phone"></i></span></div>
-						<div class="address_text"><p><span>Телефон:</span>  8 (01717) 37-4-41</p></div>
-					</div>
-					<div class="single_address fix">
-						<div class="address_icon"><span><i class="fa fa-envelope-o"></i></span></div>
-						<div class="address_text"><p><span>Email: </span> zalujie@tut.by</p></div>
-					</div>
-					<div class="single_address fix">
-						<div class="address_icon"><span><i class="fa fa-desktop"></i></span></div>
-						<div class="address_text"><p><span>Сайт учреждения образования:</span> zalujie.schools.by</p></div>
-					</div>					
-				</div>
-				<div class="col-sm-4 col-md-4 col-lg-4">
-					<div class="map">
-					   <!-- Start contact-map -->
-                            <div class="contact-map">
-                                <div id="googleMap"></div>
-                            </div>
-						<!-- End contact-map -->
-					</div>				
-				</div>
-				<div class="col-sm-4 col-md-4 col-lg-4">
-					<form action="mail.php" method="post">
-						<div class="contract_us">
-							<div class="inputt input_change">
-								<span class="message_icon"><i class="fa fa-user"></i></span>
-								<input type="text" name="name" class="form-control" id="name" placeholder="Имя" required>
-							</div>
-							<div class="inputt input_change">
-								<span class="message_icon"><i class="fa fa-envelope-o"></i></span>
-								<input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
-							</div>
-							<div class="inputt">
-								<span class="message_icon"><i class="fa fa-external-link"></i></span>
-								<textarea class="form-control" name="message"  rows="4" id="mes" placeholder="Сообщение"></textarea>
-							</div>
-							<div class="sunmite_button">
-								<button type="submit" name="ok">Написать нам</button>
-							</div>
-						</div>
-					</form>
-				</div>				
-			</div>
-		</div>			
-	</div>
-
+	
+	
 {% endblock %}

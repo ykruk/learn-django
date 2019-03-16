@@ -4,7 +4,7 @@ from .models import Post, Exposition
 from .forms import PostForm, ExpositionForm
 
 def home(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date').reverse()
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date').reverse()[0:3]
     expositions = Exposition.objects.all()
     return render(request, 'museum/home.html', {
     'posts': posts,

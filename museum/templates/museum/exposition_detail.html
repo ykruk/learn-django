@@ -36,7 +36,10 @@
 						<div class="single_blog_text">
 							<div class="post_title">
 								<h2>
-                                    {{ exposition.title }} {{ exposition.subtitle}}
+									{{ exposition.title }}
+									{% if exposition.subtitle is not None %}
+											{{ exposition.subtitle}}
+									{% endif %}
 								</h2>
 							</div>
 							<div class="blog_pra_text">

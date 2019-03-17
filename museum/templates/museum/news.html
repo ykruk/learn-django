@@ -1,0 +1,74 @@
+{% extends 'museum/base.html' %}
+
+{% block content %}
+
+<div class="bl_area">
+    <div class="container">
+        <div class="row">
+        <!--section title-->
+            <div class="col-lg-12 col-md-12">	
+                <div class="section_title">
+                    <h2 class="title"><span>Новости</span></h2>
+                </div>
+            </div>
+        <!--end section title-->
+    </div>
+
+    <div class="row">
+            <div class="team_own curosel-style">
+            <!--single blog item-->
+            {% for new in news %}
+            <div class="col-lg-12 col-md-12">
+                <div class="blog_content">
+                    
+                    <div class="blog_img hover_effect blog_hover">
+                        <a href=""><img src="{{ MEDIA_URL }}{{ new.photo }}" alt="" /></a>
+                        <div class="bolg_date">
+                            <a href="">
+                                <span>{{ new.published_date.day }}</span>
+                                <span class="month">
+                                    {% if new.published_date.month == 1 %}
+                                        янв
+                                    {% elif new.published_date.month == 2 %}
+                                        фев
+                                    {% elif new.published_date.month == 3 %}
+                                        мар
+                                    {% elif new.published_date.month == 4 %}
+                                        апр
+                                    {% elif new.published_date.month == 5 %}
+                                        мая
+                                    {% elif new.published_date.month == 6 %}
+                                        июн
+                                    {% elif new.published_date.month == 7 %}
+                                        июл
+                                    {% elif new.published_date.month == 8 %}
+                                        авг
+                                    {% elif new.published_date.month == 9 %}
+                                        сен
+                                    {% elif new.published_date.month == 10 %}
+                                        окт
+                                    {% elif new.published_date.month == 11 %}
+                                        ноя
+                                    {% elif new.published_date.month == 12 %}
+                                        дек	 
+                                    {% endif %}
+                                    </span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                    <div class="blog_text">
+                        <h2><a href="">{{ new.title }}</a></h2>
+                        <a href="">Подробнее...</a>
+                    </div>
+                    
+                </div>
+            </div>
+            {% endfor %}
+            <!--end single blog item-->				
+            </div>
+        </div>
+    </div>	
+</div>
+
+{% endblock %}

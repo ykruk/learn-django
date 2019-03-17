@@ -1112,7 +1112,7 @@ single blog css
 ==================*/
 
 .single_blog_page {
-    padding: 85px;
+    padding: 85px 85px 0px;
     background: #fff;
     margin-top: -75px;
 }
@@ -1353,6 +1353,11 @@ strong.strong_text {
 .blog-2 {
     background: #161616;
 }
+.blog_slide {
+    padding-top: 133px;
+    padding-left: auto;
+    padding-right: auto;
+}
 .blog_slide_areas {
     position: relative;
 }
@@ -1399,4 +1404,13 @@ color:#ffaa31;
 }
 .team_own.curosel-style.owl-carousel.owl-theme {
   clear: both;
+}
+.news_slide_areas {
+    position: relative;
+}
+.news_area {
+    padding: 133px 0 87px;
+}
+.bl_area {
+    padding: 153px 0 87px;
 }

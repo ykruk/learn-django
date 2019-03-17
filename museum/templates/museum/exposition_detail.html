@@ -9,13 +9,13 @@
 					<div class="blog_slide_areas">
 						<div class="single_blog_owl sblog1">
 							<div class="col-md-12">
-								<div class="blog_slide_item"><img src="{% static 'img/home1/2.png' %}" alt="" /></div>
+								<div class="blog_slide_item"><img src="{% static 'img/ex1.jpg' %}" alt="" /></div>
 							</div>
 							<div class="col-md-12">
-								<div class="blog_slide_item"><img src="{% static 'img/home1/1.png' %}" alt="" /></div>
+								<div class="blog_slide_item"><img src="{% static 'img/ex1.jpg' %}" alt="" /></div>
 							</div>
 							<div class="col-md-12">
-								<div class="blog_slide_item"><img src="{% static 'img/home1/2.png' %}" alt="" /></div>
+								<div class="blog_slide_item"><img src="{% static 'img/ex1.jpg' %}" alt="" /></div>
 							</div>
 							
 						</div>
@@ -46,17 +46,15 @@
 		    					<p>
                                     {{ exposition.description}}
 								</p>
+								{% if exposition.add_text is True %}
 								<p class="pra_text_single">
-									Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+									{{ exposition.add_text }}
 								</p>
-								<p>
-									Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari
-								</p>
+								{% endif %}
 							</div>
 						</div>												
 					</div>
 				</div>
-				<div class="col-md-1"></div>
     		</div>
         </div>
 	</div>

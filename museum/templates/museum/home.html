@@ -1,6 +1,15 @@
 {% extends 'museum/base.html' %}
 {% load static %}
 
+{% block head %}
+
+<title>Народный исторический  музей «Спадчына»</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+{% endblock %}
+
+
 {% block content %}
 	
 	<!-- HOME SLIDER -->
@@ -132,7 +141,7 @@
 						<div class="single_protfolio">
 							
 							<div class="prot_imag">
-								<a href="{% url 'exposition_detail' pk=exposition.pk %}"><img src="{{ MEDIA_URL }}{{ exposition.photo }}" alt="" /></a>
+								<a href="{% url 'exposition_detail' pk=exposition.pk %}"><img src="{{ MEDIA_URL }}{{ exposition.photo }}" alt="{{ exposition.photo_alt }}" title="{{ exposition.photo_title }}" /></a>
 								<div class="hover_port_text">
 									<h2><a href="{% url 'exposition_detail' pk=exposition.pk %}">{{ exposition.title }}</a></h2>
 									<p>
@@ -176,7 +185,7 @@
 					<div class="blog_content">
 						
 						<div class="blog_img hover_effect blog_hover">
-							<a href="{% url 'post_detail' pk=post.pk %}"><img src="{{ MEDIA_URL }}{{ post.photo }}" alt="" /></a>
+							<a href="{% url 'post_detail' pk=post.pk %}"><img src="{{ MEDIA_URL }}{{ post.photo }}" alt="{{ post.photo_alt }}" title="{{ post.photo_title }}" /></a>
 							<div class="bolg_date">
 								<a href="{% url 'post_detail' pk=post.pk %}">
 									<span>{{ post.published_date.day }}</span>
@@ -213,7 +222,7 @@
 						</div>
 						<div class="blog_text">
 							<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-							<!-- <p>{{ post.text|linebreaksbr }}</p> -->
+							<p>{{ post.short_text }}</p>
 							<a href="{% url 'post_detail' pk=post.pk %}">Подробнее...</a>
 						</div>
 						
@@ -228,5 +237,82 @@
 	
 	<!--end blog area -->
 	
-	
+{% endblock %}
+
+{% block footer %}
+
+<div class="container">
+		<div class="row">
+			<!--section title-->
+			<div class=" col-sm-12 col-md-12 col-lg-12">	
+				<div class="section_title service_color">
+					<h2 class="title"><span>Контакты</span></h2>
+				</div>
+			</div>
+			<!--end section title-->
+		</div>		
+		<div class="row">
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<div class="single_address fix">
+					<div class="address_icon"><span><i class="fa fa-map-marker"></i></span></div>
+					<div class="address_text"><p><span>Адрес музея:</span> 222669, Минская обл., Столбцовский р-н., д. Залужье, ул. Новая, 155</p></div>
+				</div>
+				<div class="single_address fix">
+					<div class="address_icon"><span><i class="fa fa-phone"></i></span></div>
+					<div class="address_text"><p><span>Телефон:</span>  8 (01717) 37-4-41</p></div>
+				</div>
+				<div class="single_address fix">
+					<div class="address_icon"><span><i class="fa fa-envelope-o"></i></span></div>
+					<div class="address_text"><p><span>Email: </span> zalujie@tut.by</p></div>
+				</div>
+				<div class="single_address fix">
+					<div class="address_icon"><span><i class="fa fa-desktop"></i></span></div>
+					<div class="address_text"><p><span>Сайт учреждения образования:</span> zalujie.schools.by</p></div>
+				</div>					
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<div class="map">
+				   <!-- Start contact-map -->
+						<div class="contact-map">
+							<div id="googleMap">
+								<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.3546117316773!2d26.600799315581074!3d53.44424697999961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDI2JzM5LjMiTiAyNsKwMzYnMTAuOCJF!5e0!3m2!1sru!2sby!4v1550508263887" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+							</div>
+						</div>
+					<!-- End contact-map -->
+				</div>				
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<!-- <form action="\feedback" method="post">{% csrf_token %} -->
+					<div class="contract_us">
+							<h1>Add A new Recipe Here</h1>
+
+							<form method="post">
+							{% csrf_token  %}
+
+								 {{ form.as_p }}
+								 <button type="submit">Save</button>
+							</form>
+						<!-- <div class="inputt input_change">
+							<span class="message_icon"><i class="fa fa-user"></i></span>
+							<input type="text" name="name" value="{{ form.sender_name}}" class="form-control" id="name" placeholder="Имя" required >
+						</div>
+						<div class="inputt input_change">
+							<span class="message_icon"><i class="fa fa-envelope-o"></i></span>
+							<input type="email" name="email" value="{{ form.sender}}" class="form-control" id="email" placeholder="Email">
+						</div>
+						<div class="inputt">
+							<span class="message_icon"><i class="fa fa-external-link"></i></span>
+							<textarea class="form-control" name="message" value="{{ form.message}}" rows="4" id="mes" placeholder="Сообщение" required></textarea>
+						</div>
+						<div class="sunmite_button">
+							<button type="submit" name="ok" value="Submit">Написать нам</button>
+						</div> -->
+						 
+					</div>
+				</form>
+			</div>				
+		</div>
+	</div>			
+</div>
+
 {% endblock %}

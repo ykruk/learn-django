@@ -24,6 +24,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = ')o#c4!i@0s9l@j6jmmwj_dvls95o%n^zho5(bj30r@(!@uj(78'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# DEBUG = False
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'ykruk.pythonanywhere.com']
@@ -125,3 +126,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+

@@ -1,5 +1,14 @@
 {% extends 'museum/base.html' %}
 
+{% block head %}
+
+<title>Народный исторический  музей «Спадчына» - Новости</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+{% endblock %}
+
+
 {% block content %}
 
 <div class="bl_area">
@@ -22,9 +31,9 @@
                 <div class="blog_content">
                     
                     <div class="blog_img hover_effect blog_hover">
-                        <a href=""><img src="{{ MEDIA_URL }}{{ new.photo }}" alt="" /></a>
+                        <a href="{% url 'post_detail' pk=new.pk %}"><img src="{{ MEDIA_URL }}{{ new.photo }}" alt="" /></a>
                         <div class="bolg_date">
-                            <a href="">
+                            <a href="{% url 'post_detail' pk=new.pk %}">
                                 <span>{{ new.published_date.day }}</span>
                                 <span class="month">
                                     {% if new.published_date.month == 1 %}
@@ -58,8 +67,8 @@
                         
                     </div>
                     <div class="blog_text">
-                        <h2><a href="">{{ new.title }}</a></h2>
-                        <a href="">Подробнее...</a>
+                        <h2><a href="{% url 'post_detail' pk=new.pk %}">{{ new.title }}</a></h2>
+                        <a href="{% url 'post_detail' pk=new.pk %}">Подробнее...</a>
                     </div>
                     
                 </div>

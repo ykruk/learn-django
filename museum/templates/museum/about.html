@@ -1,0 +1,116 @@
+{% extends 'museum/base.html' %}
+
+{% block head %}
+
+<title>Народный исторический  музей «Спадчына» - Про музей</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="news_area">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div class="single_blog_page">
+						<div class="single_blog_text">
+							<div class="post_title">
+								<h2>
+							    Про Музей
+                                </h2>
+							</div>
+							<div class="blog_pra_text">
+		    					<p>Краеведческий музей "Наследие" открыт 1 августа 1985 года. Экспозиции краеведческого музея расположены на втором этаже здания детского сада-средней школы в изолированной рекреации в отдельных помещениях. Площадь помещений, отведенных под музей, занимает 200 квадратных метров.</br></br>
+                                За время деятельности музея учителями и учениками собрана богатая экспозиция предметов народного быта, литературы, фотографий, альбомов. Экспозиции музея расположены в четырех залах.</br></br>
+                                Музей осуществляет свою деятельность на основе «Положения о музее учреждения образования», утвержденного на педагогическом совете 30 августа 2005 года.</br></br>
+                                В краеведческом музее имеются следующие документы: паспорт, учетная карточка, книга регистрации экспонатов основного фонда, книга регистрации экспонатов научно - вспомогательного фонда, план работы совета музея на учебный год, протоколы заседаний совета музея, книга отзывов о посещении краеведческого музея, тексты экскурсий, методические материалы по краеведческой, исследовательской, музейной деятельности, материалы из опыта краеведческой работы педагогов учреждения образования, нормативная документация и прочее.</br></br>
+                                В краеведческом музее насчитывается 857 экспонатов, из них 756 основного фонда. Количество экспонатов постоянно увеличивается. Тематика собранных экспонатов разнообразна. За последние три года музей пополнился ткаными коврами, скатертями, полотенцами, мухоловкой, книгами выпускника школы Станкевича И.И.</br></br>
+                                <p class="pra_text_single">
+                                    Адрес: д.Залужье, ул. Новая, 155, Столбцовский район, Минская обл. 222669, тел.(01717) 3-74-41</br>
+                                    Профиль: краеведческий</br>
+                                    Сайт учреждения образования: zalujie.schools.by</br>
+                                    Директор: Кондратина Марина Ромуальдовна</br>
+                                    Руководитель музея: Валента Наталия Владимировна</br>
+                                    Дата создания: 01.08.1985 г.</br>
+                                    Площадь музея: 200 кв.м.</br>
+                                    Количество экспонатов: 857, из них основного фонда 756
+                                </p>
+                            </div>
+						</div>												
+					</div>
+				</div>
+    		</div>
+        </div>
+
+{% endblock %}
+
+{% block footer %}
+
+	<div class="container">
+		<div class="row">
+			<!--section title-->
+			<div class=" col-sm-12 col-md-12 col-lg-12">	
+				<div class="section_title service_color">
+					<h2 class="title"><span>Контакты</span></h2>
+				</div>
+			</div>
+			<!--end section title-->
+		</div>		
+		<div class="row">
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<div class="single_address fix">
+					<div class="address_icon"><span><i class="fa fa-map-marker"></i></span></div>
+					<div class="address_text"><p><span>Адрес музея:</span> 222669, Минская обл., Столбцовский р-н., д. Залужье, ул. Новая, 155</p></div>
+				</div>
+				<div class="single_address fix">
+					<div class="address_icon"><span><i class="fa fa-phone"></i></span></div>
+					<div class="address_text"><p><span>Телефон:</span>  8 (01717) 37-4-41</p></div>
+				</div>
+				<div class="single_address fix">
+					<div class="address_icon"><span><i class="fa fa-envelope-o"></i></span></div>
+					<div class="address_text"><p><span>Email: </span> zalujie@tut.by</p></div>
+				</div>
+				<div class="single_address fix">
+					<div class="address_icon"><span><i class="fa fa-desktop"></i></span></div>
+					<div class="address_text"><p><span>Сайт учреждения образования:</span> <a href="https://zalujie.schools.by/" target="_blank">zalujie.schools.by</a></p></div>
+				</div>					
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<div class="map">
+				   <!-- Start contact-map -->
+						<div class="contact-map">
+							<div id="googleMap">
+								<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.3546117316773!2d26.600799315581074!3d53.44424697999961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDI2JzM5LjMiTiAyNsKwMzYnMTAuOCJF!5e0!3m2!1sru!2sby!4v1550508263887" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+							</div>
+						</div>
+					<!-- End contact-map -->
+				</div>				
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<form method="post">{% csrf_token  %}
+					<div class="contract_us">	
+						<div class="inputt input_change">
+							<span class="message_icon"><i class="fa fa-user"></i></span>
+							{{ form.sender_name }}
+						</div>
+						<div class="inputt input_change">
+							<span class="message_icon"><i class="fa fa-envelope-o"></i></span>
+							{{ form.sender }}
+						</div>
+						<div class="inputt">
+							<span class="message_icon"><i class="fa fa-external-link"></i></span>
+							{{ form.message }}
+						</div> -->
+						<div class="sunmite_button">
+							<button type="submit" name="ok">Написать нам</button>
+						</div>
+					</div>
+				</form>
+			</div>				
+		</div>
+	</div>			
+
+{% endblock %}

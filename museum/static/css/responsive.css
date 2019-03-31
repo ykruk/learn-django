@@ -344,6 +344,9 @@
 .about_area {
   text-align: center;
 }
+.about_area_sm {
+  text-align: center;
+}
 .icon {
   float: none;
   margin-right: 0px;
@@ -354,6 +357,7 @@
   float: none;
   overflow: hidden;
   width: 100%;
+  
 }
 .curosel-style.owl-theme .owl-controls .owl-buttons div {
   left: 67%;

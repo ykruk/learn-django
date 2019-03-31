@@ -49,7 +49,7 @@ class Message(models.Model):
     sender_name = models.CharField(max_length=100, verbose_name='Имя отправителя')
     sender = models.EmailField(max_length=254, verbose_name='Email')
     message = models.TextField(verbose_name='Сообщение')
-    copy = models.NullBooleanField()
+    reply = models.NullBooleanField(verbose_name='Рассмотрено')
 
     def __str__(self):
         return self.message

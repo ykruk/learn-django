@@ -76,7 +76,7 @@
 				<!--section title-->
 				<div class="col-md-12 col-sm-12 col-lg-12">	
 					<div class="section_title">
-						<h2 class="title"><span>О нас</span></h2>
+						<h2 class="title"><a href="/about">О нас</a></h2>
 					</div>
 				</div>
 				<!--end section title-->
@@ -94,7 +94,7 @@
 			</div>
 		</div>	
 	</div>
-	<div class="about_area_sm collapse in visible-sm visible-xs" id="about">
+	<div class="about_area_sm collapse in visible-sm visible-xs" id="about_sm">
 		<div class="container">
 			<div class="row">
 				<!--section title-->
@@ -241,7 +241,7 @@
 
 {% block footer %}
 
-<div class="container">
+	<div class="container">
 		<div class="row">
 			<!--section title-->
 			<div class=" col-sm-12 col-md-12 col-lg-12">	
@@ -267,7 +267,7 @@
 				</div>
 				<div class="single_address fix">
 					<div class="address_icon"><span><i class="fa fa-desktop"></i></span></div>
-					<div class="address_text"><p><span>Сайт учреждения образования:</span> zalujie.schools.by</p></div>
+					<div class="address_text"><p><span>Сайт учреждения образования:</span> <a href="https://zalujie.schools.by/" target="_blank">zalujie.schools.by</a></p></div>
 				</div>					
 			</div>
 			<div class="col-sm-4 col-md-4 col-lg-4">
@@ -282,37 +282,28 @@
 				</div>				
 			</div>
 			<div class="col-sm-4 col-md-4 col-lg-4">
-				<!-- <form action="\feedback" method="post">{% csrf_token %} -->
-					<div class="contract_us">
-							<h1>Add A new Recipe Here</h1>
-
-							<form method="post">
-							{% csrf_token  %}
-
-								 {{ form.as_p }}
-								 <button type="submit">Save</button>
-							</form>
-						<!-- <div class="inputt input_change">
+				<form method="post">{% csrf_token  %}
+					<div class="contract_us">	
+						<div class="inputt input_change">
 							<span class="message_icon"><i class="fa fa-user"></i></span>
-							<input type="text" name="name" value="{{ form.sender_name}}" class="form-control" id="name" placeholder="Имя" required >
+							{{ form.sender_name }}
 						</div>
 						<div class="inputt input_change">
 							<span class="message_icon"><i class="fa fa-envelope-o"></i></span>
-							<input type="email" name="email" value="{{ form.sender}}" class="form-control" id="email" placeholder="Email">
+							{{ form.sender }}
 						</div>
 						<div class="inputt">
 							<span class="message_icon"><i class="fa fa-external-link"></i></span>
-							<textarea class="form-control" name="message" value="{{ form.message}}" rows="4" id="mes" placeholder="Сообщение" required></textarea>
-						</div>
-						<div class="sunmite_button">
-							<button type="submit" name="ok" value="Submit">Написать нам</button>
+							{{ form.message }}
 						</div> -->
-						 
+						<div class="sunmite_button">
+							<button type="submit" name="ok">Написать нам</button>
+						</div>
 					</div>
 				</form>
 			</div>				
 		</div>
 	</div>			
-</div>
+
 
 {% endblock %}

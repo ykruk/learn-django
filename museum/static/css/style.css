@@ -450,6 +450,9 @@ about area css
 .about_area_sm {
     padding: 133px 0 77px;
 }
+.title a {
+    border-bottom: 2px solid #323b48;
+}
 .section_title {} .title {
     font-size: 24px;
     font-weight: bold;
@@ -1010,6 +1013,14 @@ footer area css
     font-size: 16px;
     padding: 24px 0 0;
 }
+.address_text a {
+    color: #ddd;
+    font-size: 16px;
+    padding: 24px 0 0;
+}
+.address_text a:hover {
+    color: #FFAA31;
+}
 .address_text p span {
     color: #1ba1e2;
 }
@@ -1064,6 +1075,7 @@ footer area css
     color: #fff;
     height: 120px;
     padding-left: 65px;
+    vertical-align: top;
 }
 .input_change {
     margin-bottom: 8px;

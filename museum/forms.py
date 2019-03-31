@@ -12,14 +12,25 @@ class ExpositionForm(forms.ModelForm):
         model = Exposition
         fields = ('title', 'description', 'add_text', 'photo')
 
-# class ContactForm(forms.Form):
-#     name = forms.CharField(label='Имя')
-#     email = forms.EmailField(label='Email', required=False)
-#     message = forms.CharField(label='Сообщение', widget=forms.Textarea)
-
 class MessageForm(forms.ModelForm):
+    sender_name = forms.CharField(widget=forms.TextInput(attrs={
+        'name':'name',
+        'class':'form-control',
+        'id':'name',
+        'placeholder':'Имя'}))
+    sender = forms.EmailField(widget=forms.TextInput(attrs={
+        'name':'email',
+        'class':'form-control',
+        'id':'email',
+        'placeholder':'Email'}))
+    message = forms.CharField(widget=forms.TextInput(attrs={
+        'name':'message',
+        'class':'form-control',
+        'id':'mes',
+        'rows':'4',
+        'placeholder':'Сообщение'}))
     class Meta:
         model = Message
-        fields = ('sender_name', 'sender', 'message')
+        fields = ('sender_name', 'sender', 'message', 'reply')
 
         

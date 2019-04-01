@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.utils import timezone
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import Post, Exposition
+from .models import Post, Exposition, Post_img, Exposition_img, Message
 from .forms import PostForm, ExpositionForm, MessageForm
 
 def home(request):
@@ -25,10 +25,22 @@ def home(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'museum/post_detail.html', {'post': post})
+    post_imgs = Post_img.objects.filter(post=post.id)
+    if request.method == "POST":
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            message = form.save(commit=False)
+            message.save()
+            return redirect('/feedback.html')
+    else:
+        form = MessageForm()
+    return render(request, 'museum/post_detail.html', {
+        'post': post,
+        'form': form})
 
 def exposition_detail(request, pk):
     exposition = get_object_or_404(Exposition, pk=pk)
+    exp_imgs = Exposition_img.objects.filter(exp=exposition.id)
     if request.method == "POST":
         form = MessageForm(request.POST)
         if form.is_valid():
@@ -39,11 +51,22 @@ def exposition_detail(request, pk):
         form = MessageForm()
     return render(request, 'museum/exposition_detail.html', {
     'exposition': exposition,
+    'exp_imgs': exp_imgs,
     'form': form}) 
 
 def news(request):
     news = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date').reverse()
-    return render(request, 'museum/news.html', {'news': news})
+    if request.method == "POST":
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            message = form.save(commit=False)
+            message.save()
+            return redirect('/feedback.html')
+    else:
+        form = MessageForm()
+    return render(request, 'museum/news.html', {
+    'news': news,
+    'form': form})
 
 def feedback(request):
     return render(request, 'museum/feedback.html', {})

@@ -9,10 +9,10 @@ class ExpositionAdmin(admin.ModelAdmin):
 class MessageAdmin(admin.ModelAdmin):
     list_display = ('message', 'sender_name', 'sender', 'reply')
 class Exposition_imgAdmin(admin.ModelAdmin):
-    list_display = ('img', 'img_alt')
+    list_display = ('img', 'img_alt', 'exp')
     search_fields = ['img_alt']
 class Post_imgAdmin(admin.ModelAdmin):
-    list_display = ('img', 'img_alt')
+    list_display = ('img', 'img_alt', 'post')
     search_fields = ['img_alt']
 
 admin.site.register(Post, PostAdmin)

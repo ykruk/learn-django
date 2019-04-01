@@ -79,7 +79,7 @@ class Post_img(models.Model):
         verbose_name_plural = 'Фото новости'
         
 class Exposition_img(models.Model):
-    post = models.ForeignKey('Exposition', on_delete=models.CASCADE, verbose_name='Экспозиция')
+    exp = models.ForeignKey('Exposition', on_delete=models.CASCADE, verbose_name='Экспозиция')
     img = models.ImageField(upload_to='exp', default='exp.png', verbose_name='Фото')
     img_alt = models.CharField(max_length=200, default='none', verbose_name='Описание фото')
     img_title = models.CharField(max_length=200, default='none', verbose_name='Описание фото при наведении')

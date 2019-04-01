@@ -58,6 +58,32 @@
         </div>
 
     </div>
+   
+{% endblock %}
 
-    
+{% block footer %}
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<form method="post">{% csrf_token  %}
+					<div class="contract_us">	
+						<div class="inputt input_change">
+							<span class="message_icon"><i class="fa fa-user"></i></span>
+							{{ form.sender_name }}
+						</div>
+						<div class="inputt input_change">
+							<span class="message_icon"><i class="fa fa-envelope-o"></i></span>
+							{{ form.sender }}
+						</div>
+						<div class="inputt">
+							<span class="message_icon"><i class="fa fa-external-link"></i></span>
+							{{ form.message }}
+						</div> -->
+						<div class="sunmite_button">
+							<button type="submit" name="ok">Написать нам</button>
+						</div>
+					</div>
+				</form>
+			</div>				
+		</div>
+	</div>			
+
 {% endblock %}

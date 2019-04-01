@@ -504,7 +504,11 @@ progress area css
 }
 .progress_text h2 {} .progress_text h2 span {
     color: #1ba1e2;
-    border-bottom: 1px solid #1ba1e2;
+}
+.progress_text a {
+    color: #323b48;
+    font-size: 20px;
+    border-bottom: 1px solid #323b48;
 }
 .progress_content {
     margin-top: 5px;
@@ -1211,6 +1215,7 @@ p.pra_text_single {
     background: #2b2b2b none repeat scroll 0 0;
     font-style: italic;
     padding: 55px 20px;
+    color: #e6e6e6;
 }
 .blog-2 p.pra_text_single {
     background: #505050 none repeat scroll 0 0;
